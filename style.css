@@ -1,0 +1,81 @@
+/* Основний стиль для чорного фону і жовтого тексту */
+body {
+    background-color: black;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+#domain {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0; /* Спочатку прихований */
+    transform: scale(0); /* Спочатку зменшений */
+    animation: pixelAppear 0.5s forwards; /* Анімація при появі */
+}
+
+/* Кнопка для генерації домену */
+#generate-btn {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 40px;
+    transition: background-color 0.3s;
+}
+
+#generate-btn:hover {
+    background-color: orange;
+}
+
+/* Написи про крипту */
+#crypto-messages {
+    text-align: center;
+}
+
+.message {
+    margin: 10px 0;
+}
+
+/* Стилі для різних написів */
+.large {
+    font-size: 2rem;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.neon {
+    font-size: 1.8rem;
+    text-shadow: 0 0 5px #FFF700, 0 0 10px #FFF700, 0 0 20px #FFF700, 0 0 40px #FFDE00;
+    color: yellow;
+}
+
+/* Анімація для піксельного ефекту */
+@keyframes pixelAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2); /* Злегка збільшено */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Відновлено до нормального розміру */
+    }
+}
